@@ -1,2 +1,5 @@
 # SearchMovie
-Código escrito em C# e ASP.NET MVC consumindo a API "OMDb" (The Open Movie Database)
+
+Aplicação Web para consulta de informação sobre filmes
+
+> Atualizações em breve
