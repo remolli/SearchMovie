@@ -20,6 +20,11 @@ namespace SearchMovie.API
             var jsonString = await response.Content.ReadAsStringAsync();
             return jsonString;
         }
-        
+        public async Task<MovieModel> GetMovie(string title)
+        {
+            var jsonString = await GetJsonString($"https://www.omdbapi.com/?t={title}&apikey=");
+            MovieModel movie = JsonConvert.DeserializeObject<MovieModel>(jsonString);
+            return movie;
+        }
     }
 }
