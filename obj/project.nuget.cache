@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dMCWNoh0Huw18n0l0QwiIJErtXdGitjILRh/T+L3GNaq4vOyxjUxtU9ouL8ThuRmzTtue0ZVBeDvuFLVXUZKCw==",
+  "dgSpecHash": "UM75UhE4c8y0fhEME+i84rK/kQ0FyJlefOpWTYjlqt4xa3AeLyl/BjCwnT+L82KT0GYOLR6WVqbsjkmJEf6zmg==",
   "success": true,
   "projectFilePath": "C:\\Users\\lia\\Desktop\\SearchMovie\\SearchMovie.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\lia\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }
