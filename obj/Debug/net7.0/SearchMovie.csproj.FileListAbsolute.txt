@@ -29,3 +29,5 @@ C:\Users\lia\Desktop\SearchMovie\obj\Debug\net7.0\refint\SearchMovie.dll
 C:\Users\lia\Desktop\SearchMovie\obj\Debug\net7.0\SearchMovie.pdb
 C:\Users\lia\Desktop\SearchMovie\obj\Debug\net7.0\SearchMovie.genruntimeconfig.cache
 C:\Users\lia\Desktop\SearchMovie\obj\Debug\net7.0\ref\SearchMovie.dll
+C:\Users\lia\Desktop\SearchMovie\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\lia\Desktop\SearchMovie\obj\Debug\net7.0\SearchMovie.csproj.CopyComplete

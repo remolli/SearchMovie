@@ -1,0 +1,12 @@
+﻿@model MovieModel.SearchResponse
+
+@{
+    ViewData["Title"] = "Movies";
+}
+
+<div class="container">
+    @foreach (var movie in Model.Search)
+    {
+        <p>@movie.Title</p>
+    }
+</div>
