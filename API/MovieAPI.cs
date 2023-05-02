@@ -22,7 +22,6 @@ namespace SearchMovie.API
 
         public async Task<MovieModel.Movie> GetMovie(string title)
         {
-            HttpClient httpClient = new HttpClient();
             var jsonString = await GetJsonString($"https://www.omdbapi.com/?t={title}&apikey=");
             MovieModel.Movie movie = JsonConvert.DeserializeObject<MovieModel.Movie>(jsonString);
             return movie;
@@ -30,8 +29,13 @@ namespace SearchMovie.API
 
         public async Task<MovieModel.SearchResponse> GetSearchResponse(string search)
         {
-            HttpClient httpClient = new HttpClient();
             var jsonString = await GetJsonString($"https://www.omdbapi.com/?s={search}&apikey=");
+            MovieModel.SearchResponse searchResponse = JsonConvert.DeserializeObject<MovieModel.SearchResponse>(jsonString);
+            return searchResponse;
+        }
+        public async Task<MovieModel.SearchResponse> GetSearchResponse(string search, int page)
+        {
+            var jsonString = await GetJsonString($"https://www.omdbapi.com/?s={search}&page={page}&apikey=");
             MovieModel.SearchResponse searchResponse = JsonConvert.DeserializeObject<MovieModel.SearchResponse>(jsonString);
             return searchResponse;
         }

@@ -1,12 +1,23 @@
-﻿@model MovieModel.SearchResponse
+﻿@model IEnumerable<MovieModel.MovieBySearch>
 
 @{
     ViewData["Title"] = "Movies";
 }
 
 <div class="container">
-    @foreach (var movie in Model.Search)
-    {
-        <p>@movie.Title</p>
-    }
+    <div class="row row-cols-5">
+        @foreach (var movie in Model)
+        {
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="@movie.Poster" alt="@movie.Title" width="200" height="300">
+                    <div class="card-body">
+                        <h5 class="card-title">@movie.Title</h5>
+                        <p class="card-text">Year: @movie.Year</p>
+                        <a class="btn btn-primary">Select Movie</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>
