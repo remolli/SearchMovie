@@ -1,5 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model MovieModel.Movie
+
 @{
+    ViewData["Title"] = "Movie - " + Model.Title;
 }
+
+<div class="container-fluid row align-items-center justify-content-center">
+    <div class="col justify-content-end align-items-center">
+        <img src="@Model.Poster" class="img-fluid" alt="@Model.Title">
+    </div>
+    <div class="col border-dark border-start p-sm-3 align-items-center justify-content-center">
+        <h2 class="text-lg-start">@Model.Title</h2>
+        <h5 class="text-md-start">Released in @Model.Year</h5>
+        <span class="text-md-start">Starring: @Model.Actors</span>
+        <p class="text-md-start m-sm-2">@Model.Plot</p>
+    </div>
+</div>

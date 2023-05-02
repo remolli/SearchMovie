@@ -18,9 +18,9 @@ namespace SearchMovie.Controllers
             return View(searchResponse.Search);
         }
 
-        public async Task<IActionResult> Movie(string imdbID)
+        public async Task<IActionResult> Movie(string id)
         {
-            var movie = await _movieAPI.GetMovie(imdbID);
+            var movie = await _movieAPI.GetMovie(id);
             return View(movie);
         }
 

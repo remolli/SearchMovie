@@ -5,16 +5,16 @@
 }
 
 <div class="container">
-    <div class="row row-cols-5">
+    <div class="row row-cols-md-4 row-cols-sm-3 row-cols-2">
         @foreach (var movie in Model)
         {
             <div class="col">
                 <div class="card">
-                    <img src="@movie.Poster" alt="@movie.Title" width="200" height="300">
+                    <img src="@movie.Poster" alt="@movie.Title">
                     <div class="card-body">
                         <h5 class="card-title">@movie.Title</h5>
                         <p class="card-text">Released in @movie.Year</p>
-                        <a class="btn btn-outline-primary">Select Movie</a>
+                        <a class="btn btn-outline-primary" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
                     </div>
                 </div>
             </div>
