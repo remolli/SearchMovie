@@ -12,9 +12,13 @@ namespace SearchMovie.Controllers
             return View();
         }
 
-        public async Task<IActionResult> Movies()
+        public async Task<IActionResult> Movies(string search)
         {
-            var searchResponse = await _movieAPI.GetSearchResponse("app");
+            if (search == null)
+            {
+                search = "app";
+            }
+            var searchResponse = await _movieAPI.GetSearchResponse(search);
             return View(searchResponse.Search);
         }
 

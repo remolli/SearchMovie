@@ -5,6 +5,13 @@
 }
 
 <div class="container">
+    <form asp-controller="Search" asp-action="Movies">
+        <p class="text-black">Search: </p><input type="text" name="search"/>
+        <input type="submit" class="btn btn-outline-dark" value="Search"/>
+    </form>
+</div>
+
+<div class="container">
     <div class="row row-cols-md-4 row-cols-sm-3 row-cols-2">
         @foreach (var movie in Model)
         {
