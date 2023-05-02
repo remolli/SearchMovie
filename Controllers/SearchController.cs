@@ -18,6 +18,12 @@ namespace SearchMovie.Controllers
             return View(searchResponse.Search);
         }
 
+        public async Task<IActionResult> Movie(string imdbID)
+        {
+            var movie = await _movieAPI.GetMovie(imdbID);
+            return View(movie);
+        }
+
         public async Task<IActionResult> NextPage(int page)
         {
             var searchResponse = await _movieAPI.GetSearchResponse("app", page);
