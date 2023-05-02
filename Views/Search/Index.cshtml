@@ -2,7 +2,15 @@
     ViewData["Title"] = "Search";
 }
 
-<div class="container">
-    <h1>What do you wanna search?</h1>
-    <a class="btn btn-outline-dark" asp-area="" asp-controller="Search" asp-action="Movies">Movies</a>
+<div class="container d-flex justify-content-center align-items-center">
+    <div class="col">
+        <div class="row">
+            <h1 class="text-center">What do you wanna search?</h1>
+        </div>
+        <div class="row d-flex justify-content-center">
+            <a class="btn btn-info" style="width:auto;height:auto" asp-area="" asp-controller="Search" asp-action="Movies">Movies</a>
+            <a class="btn btn-outline-dark" style="width:auto;height:auto">Coming Soon</a>
+            <a class="btn btn-outline-dark" style="width:auto;height:auto">Coming Soon</a>
+        </div>
+    </div>
 </div>
