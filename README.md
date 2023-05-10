@@ -91,10 +91,6 @@ Por fim, basta você se divertir com a aplicação podendo modificá-la e utiliz
 ![image](https://user-images.githubusercontent.com/85965657/235801085-884b22e9-ad89-43e3-a73b-8dc52f26a894.png) <br/>
 
 ### /Search
-> Index da Página Search <br/>
-![image](https://user-images.githubusercontent.com/85965657/235801163-49134424-4f73-46cc-9202-f613598d400a.png) <br/>
-
-### /Search/Movies
 > Página de procura de filmes <br/>
 ![image](https://user-images.githubusercontent.com/85965657/235801462-c274525e-cb56-4a6a-838f-0634ddf83216.png) <br/>
 
