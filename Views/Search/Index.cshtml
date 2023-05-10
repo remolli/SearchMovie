@@ -1,16 +1,30 @@
-﻿@{
+﻿@model IEnumerable<MovieModel.MovieBySearch>
+
+@{
     ViewData["Title"] = "Search";
 }
 
-<div class="container d-flex justify-content-center align-items-center">
-    <div class="col">
-        <div class="row">
-            <h1 class="text-center">What do you want search?</h1>
-        </div>
-        <div class="row d-flex justify-content-center">
-            <a class="btn btn-danger" style="width:auto;height:auto" asp-area="" asp-controller="Search" asp-action="Movies">Movies</a>
-            <a class="btn btn-outline-dark" style="width:auto;height:auto">Coming Soon</a>
-            <a class="btn btn-outline-dark" style="width:auto;height:auto">Coming Soon</a>
-        </div>
+<div class="container text-center p-5">
+    <form asp-controller="Search" asp-action="Index">
+        <input type="text" placeholder="Movie Title" name="search" />
+        <input type="submit" class="btn btn-outline-dark" value="Search" />
+    </form>
+</div>
+
+<div class="container">
+    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
+        @foreach (var movie in Model)
+        {
+            <div class="col">
+                <div class="card">
+                    <img src="@movie.Poster" alt="@movie.Title">
+                    <div class="card-body">
+                        <h5 class="card-title">@movie.Title</h5>
+                        <p class="card-text">Released in @movie.Year</p>
+                        <a class="btn btn-outline-primary" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
+                    </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
