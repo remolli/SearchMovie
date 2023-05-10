@@ -6,13 +6,8 @@ namespace SearchMovie.Controllers
     public class SearchController : Controller
     {
         MovieAPI _movieAPI = new MovieAPI("931237d");
-
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-        public async Task<IActionResult> Movies(string search)
+        
+        public async Task<IActionResult> Index(string search)
         {
             if (search == null)
             {
