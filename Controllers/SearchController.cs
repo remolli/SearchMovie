@@ -11,7 +11,7 @@ namespace SearchMovie.Controllers
         {
             if (search == null)
             {
-                search = "app";
+                search = "Spider";
             }
             var searchResponse = await _movieAPI.GetSearchResponse(search);
             return View(searchResponse.Search);
@@ -21,12 +21,6 @@ namespace SearchMovie.Controllers
         {
             var movie = await _movieAPI.GetMovie(id);
             return View(movie);
-        }
-
-        public async Task<IActionResult> NextPage(int page)
-        {
-            var searchResponse = await _movieAPI.GetSearchResponse("app", page);
-            return View("Movies", searchResponse.Search);
         }
     }
 }
