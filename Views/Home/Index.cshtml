@@ -1,8 +1,35 @@
-﻿@{
+﻿@model IEnumerable<MovieModel.Movie>
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <div class="container text-center">
     <h1 class="display-1">Welcome to <p style="color:red">SearchMovie</p></h1>
     <p class="display-6" style="">The tool that help you find <i>interesting</i> movies</p>
+</div>
+
+<div class="container text-center p-5">
+    <form asp-controller="Search" asp-action="Index">
+        <input type="text" placeholder="Movie Title" name="search" />
+        <input type="submit" class="btn btn-outline-dark" value="Search" />
+    </form>
+</div>
+
+<div class="container text-center col">
+    @foreach (var movie in Model)
+    {
+        <div class="container-fluid row align-items-center justify-content-center p-3">
+            <div class="col justify-content-end align-items-center">
+                <img src="@movie.Poster" class="img-fluid" alt="@movie.Title">
+            </div>
+            <div class="col border-dark border-start p-sm-3 align-items-center justify-content-center">
+                <h2 class="text-lg-start">@movie.Title</h2>
+                <h5 class="text-md-start">Released in @movie.Year</h5>
+                <h5 class="text-md-start">@movie.Genre</h5>
+                <span class="text-md-start">Starring: @movie.Actors</span>
+                <p class="text-md-start m-sm-2">@movie.Plot</p>
+            </div>
+        </div>
+    }
 </div>
