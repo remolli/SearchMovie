@@ -7,6 +7,7 @@ namespace SearchMovie.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        public MovieModel.CastMovies castMovies = new();
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -15,7 +16,7 @@ namespace SearchMovie.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            return View(castMovies.castMovies);
         }
 
         public IActionResult About()
