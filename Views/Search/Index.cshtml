@@ -4,10 +4,10 @@
     ViewData["Title"] = "Search";
 }
 
-<div class="container text-center p-5">
+<div class="container text-center p-3 my-4 w-50 border-bottom border-2 border-danger bg-dark text-white" style="border-radius:10px">
     <form asp-controller="Search" asp-action="Index">
         <input type="text" placeholder="Movie Title" name="search" />
-        <input type="submit" class="btn btn-outline-dark" value="Search" />
+        <input type="submit" class="btn btn-outline-light" value="Search" />
     </form>
 </div>
 
@@ -21,7 +21,7 @@
                     <div class="card-body">
                         <h5 class="card-title">@movie.Title</h5>
                         <p class="card-text">Released in @movie.Year</p>
-                        <a class="btn btn-outline-primary" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
+                        <a class="btn btn-outline-danger" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
                     </div>
                 </div>
             </div>
