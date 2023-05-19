@@ -13,7 +13,17 @@ namespace SearchMovie.Controllers
             {
                 search = "Spider";
             }
+            else if (search.Length < 3)
+            {
+                return View("TooMuchResults", search);
+            }
+
             var searchResponse = await _movieAPI.GetSearchResponse(search);
+
+            if (searchResponse.Search == null)
+            {
+                return View("NotFound");
+            }
             return View(searchResponse.Search);
         }
 
