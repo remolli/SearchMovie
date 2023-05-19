@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Not Found";
+}
+
+<div class="container-fluid text-center">
+    <h1 class="display-6 my-5 border-bottom">Not Found Result</h1>
+    <p>
+        The OMDb API not found a result, sorry.
+    </p>
+</div>
+<div class="container text-center p-3 w-50 border-bottom border-4 border-danger bg-dark text-white" style="border-radius:10px">
+    <h1 class="display-1 p-1" style="font-size:x-large">Try searching again</h1>
+    <form asp-controller="Search" asp-action="Index">
+        <input type="text" placeholder="Movie Title" name="search" />
+        <input type="submit" class="btn btn-outline-light" value="Search" />
+    </form>
+</div>
