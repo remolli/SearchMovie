@@ -5,9 +5,9 @@
 }
 
 <div class="container text-center p-3 my-4 w-50 border-bottom border-2 border-danger bg-dark text-white" style="border-radius:10px">
-    <form asp-controller="Search" asp-action="Index">
+    <form asp-controller="Search" asp-action="Index" class="d-flex justify-content-center align-items-center">
         <input type="text" placeholder="Movie Title" name="search" />
-        <input type="submit" class="btn btn-outline-light" value="Search" />
+        <input type="submit" class="btn btn-outline-light mx-3" value="Search" />
     </form>
 </div>
 
@@ -16,11 +16,11 @@
         @foreach (var movie in Model)
         {
             <div class="col">
-                <div class="card">
+                <div class="card border border-danger border-2">
                     <img src="@movie.Poster" alt="@movie.Title">
-                    <div class="card-body">
-                        <h5 class="card-title">@movie.Title</h5>
-                        <p class="card-text">Released in @movie.Year</p>
+                    <div class="card-body bg-black">
+                        <h5 class="card-title text-white">@movie.Title</h5>
+                        <p class="card-text text-light">Released in @movie.Year</p>
                         <a class="btn btn-outline-danger" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
                     </div>
                 </div>
