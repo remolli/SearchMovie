@@ -13,8 +13,12 @@
 </div>
 <div class="container text-center p-3 w-50 border-bottom border-4 border-danger bg-dark text-white" style="border-radius:10px">
     <h1 class="display-1 p-1" style="font-size:x-large">Try searching again</h1>
-    <form asp-controller="Search" asp-action="Index" class="d-flex justify-content-center align-items-center">
-        <input type="text" placeholder="Movie Title" name="search" />
-        <input type="submit" class="btn btn-outline-light mx-2" value="Search" />
+    <form asp-controller="Search" asp-action="Index" class="row d-flex justify-content-center align-items-center row-cols-1 row-cols-md-2">
+        <div class="col">
+            <input type="text" class="col" placeholder="Movie Title" name="search" />
+        </div>
+        <div class="col">
+            <input type="submit" class="col btn btn-outline-light mx-3" value="Search" />
+        </div>
     </form>
 </div>
