@@ -88,20 +88,20 @@ Por fim, basta você se divertir com a aplicação podendo modificá-la e utiliz
 
 ### /Home
 > Página Inicial <br/>
-![image](https://user-images.githubusercontent.com/85965657/235801085-884b22e9-ad89-43e3-a73b-8dc52f26a894.png) <br/>
+![Home](https://github.com/Evandru/SearchMovie/assets/85965657/0df87f57-4f75-4d18-9964-03b161826590) <br/>
 
 ### /Search
 > Página de procura de filmes <br/>
-![image](https://user-images.githubusercontent.com/85965657/235801462-c274525e-cb56-4a6a-838f-0634ddf83216.png) <br/>
+![Search](https://github.com/Evandru/SearchMovie/assets/85965657/47bf9cf0-ea10-41db-aefc-a8ac7cbe71d6) <br/>
 
 ### /Search/Movie
 > Página exibindo o filme selecionado <br/>
-![image](https://user-images.githubusercontent.com/85965657/235801516-8ce24a10-1837-43b7-80cb-f30869b00d4d.png) <br/>
+![Movie](https://github.com/Evandru/SearchMovie/assets/85965657/e8fb967b-f186-4971-9052-18a3e694ac6b) <br/>
 
 ### /About
 > Página Sobre <br/>
-![image](https://user-images.githubusercontent.com/85965657/235801603-d1259112-53ca-43be-8432-52e99fbf1d9e.png) <br/>
+![About](https://github.com/Evandru/SearchMovie/assets/85965657/372bbeae-c348-4e64-83b6-be114c7404d6) <br/>
 
 ### /Contact
 > Página de Contato <br/>
-![image](https://user-images.githubusercontent.com/85965657/235801767-713c8fe5-120c-4047-8341-d1525d2cb306.png) <br/>
+![Contact](https://github.com/Evandru/SearchMovie/assets/85965657/384bf9d5-3150-4dd4-a9fb-8b13041bb4bb) <br/>
