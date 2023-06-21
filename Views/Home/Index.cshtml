@@ -27,8 +27,8 @@
         i++;
         if (i % 2 == 0)
         {
-            <div class="container-fluid row align-items-center justify-content-center p-3">
-                <div class="col border-dark border-end p-sm-3">
+            <div class="container-fluid row align-items-center justify-content-center p-3 row-cols-1 row-cols-sm-2 my-5">
+                <div class="col border-dark border p-sm-3 my-3">
                     <h2 class="text-lg-end">@movie.Title</h2>
                     <h5 class="text-md-end">Released in @movie.Year</h5>
                     <p class="text-md-end text-decoration-underline">@movie.Genre</p>
@@ -42,11 +42,11 @@
         }
         else
         {
-            <div class="container-fluid row align-items-center justify-content-center p-3">
+            <div class="container-fluid row align-items-center justify-content-center p-3 row-cols-1 row-cols-sm-2 my-5">
                 <div class="col justify-content-end align-items-center">
                     <img src="@movie.Poster" class="img-fluid border border-2 border-danger shadow-lg" alt="@movie.Title">
                 </div>
-                <div class="col border-dark border-start p-sm-3">
+                <div class="col border-dark border p-sm-3 my-3">
                     <h2 class="text-lg-start">@movie.Title</h2>
                     <h5 class="text-md-start">Released in @movie.Year</h5>
                     <p class="text-md-start text-decoration-underline">@movie.Genre</p>
