@@ -15,17 +15,27 @@
     </form>
 </div>
 
-<div class="container">
+<div class="container text-center">
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-1">
         @foreach (var movie in Model)
         {
-            <div class="col">
+            <div class="col desktop">
                 <div class="card border border-danger border-2">
                     <img src="@movie.Poster" alt="@movie.Title">
                     <div class="card-body bg-black">
                         <h5 class="card-title text-white">@movie.Title</h5>
                         <p class="card-text text-light">Released in @movie.Year</p>
-                        <a class="btn btn-outline-danger" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
+                        <a class="btn btn-outline-danger stretched-link" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col my-4 mobile">
+                <div class="card border border-danger border-2">
+                    <img src="@movie.Poster" alt="@movie.Title">
+                    <div class="card-body bg-black">
+                        <h5 class="card-title text-white">@movie.Title</h5>
+                        <p class="card-text text-light">Released in @movie.Year</p>
+                        <a class="btn btn-outline-danger stretched-link" asp-action="Movie" asp-route-id="@movie.imdbID">Information</a>
                     </div>
                 </div>
             </div>
