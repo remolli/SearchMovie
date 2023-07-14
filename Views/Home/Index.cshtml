@@ -13,7 +13,8 @@
 <div class="container text-center p-3 my-4 w-50 border-bottom border-2 border-danger bg-dark text-white" style="border-radius:10px">
     <form asp-controller="Search" asp-action="Index" class="row d-flex justify-content-center align-items-center row-cols-1 row-cols-md-2">
         <div class="col">
-            <input type="text" class="col" placeholder="Movie Title" name="search" />
+            <input type="text" class="col desktop" placeholder="Movie Title" name="search" />
+            <input type="text" class="col mobile" style="width:100%" placeholder="Movie Title" name="search" />
         </div>
         <div class="col">
             <input type="submit" class="col btn btn-outline-light mx-3" value="Search" />
@@ -21,7 +22,7 @@
     </form>
 </div>
 
-<div class="container text-center col">
+<div class="container text-center col desktop">
     @foreach (var movie in Model)
     {
         i++;
@@ -55,5 +56,23 @@
                 </div>
             </div>
         }
+    }
+</div>
+
+<div class="container text-center col mobile">
+    @foreach (var movie in Model)
+    {
+        <div class="container-fluid row align-items-center justify-content-center p-3 row-cols-1 row-cols-sm-2 my-5">
+            <div class="col border-dark border-start border-end bg-light p-sm-3 my-3">
+                <h2 class="text-lg-end">@movie.Title</h2>
+                <h5 class="text-md-end">Released in @movie.Year</h5>
+                <p class="text-md-end text-decoration-underline">@movie.Genre</p>
+                <span class="text-md-end"><strong>Starring</strong>: @movie.Actors</span>
+                <p class="text-md-end m-sm-2 border-top border-bottom p-2">@movie.Plot</p>
+                <div class="col justify-content-end align-items-center py-2">
+                    <img src="@movie.Poster" class="img-fluid border border-2 border-danger shadow-lg" alt="@movie.Title">
+                </div>
+            </div>
+        </div>
     }
 </div>
