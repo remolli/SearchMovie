@@ -11,18 +11,26 @@
     <p class="fs-5 mobile" style="">The tool that help you find <i>interesting</i> movies</p>
 </div>
 
-<div class="container text-center p-3 my-4 w-50 border-bottom border-2 border-danger bg-dark text-white" style="border-radius:10px">
+<div class="desktop container text-center p-3 my-4 w-50 border-bottom border-2 border-danger bg-dark text-white" style="border-radius:10px">
     <form asp-controller="Search" asp-action="Index" class="row d-flex justify-content-center align-items-center row-cols-1 row-cols-md-2">
         <div class="col">
-            <input type="text" class="col desktop" placeholder="Movie Title" name="search" />
-            <input type="text" class="col mobile" style="width:100%" placeholder="Movie Title" name="search" />
+            <input type="text" class="col" placeholder="Movie Title" name="search" />
         </div>
         <div class="col">
             <input type="submit" class="col btn btn-outline-light mx-3" value="Search" />
         </div>
     </form>
 </div>
-
+<div class="mobile container text-center p-3 my-4 w-50 border-bottom border-2 border-danger bg-dark text-white" style="border-radius:10px">
+    <form asp-controller="Search" asp-action="Index" class="row d-flex justify-content-center align-items-center row-cols-1 row-cols-md-2">
+        <div class="col">
+            <input type="text" class="col" style="width:100%" placeholder="Movie Title" name="search" />
+        </div>
+        <div class="col">
+            <input type="submit" class="col btn btn-outline-light mx-3" value="Search" />
+        </div>
+    </form>
+</div>
 <div class="container text-center col desktop">
     @foreach (var movie in Model)
     {
