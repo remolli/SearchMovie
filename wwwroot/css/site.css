@@ -20,3 +20,15 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+@media (max-width: 575px) {
+    .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {
+    .mobile {
+        display: none;
+    }
+}
